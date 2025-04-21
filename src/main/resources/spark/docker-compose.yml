@@ -1,0 +1,34 @@
+version: '3'
+services:
+  spark-master:
+    image: bitnami/spark:3.4.1
+    container_name: spark-master
+    environment:
+      - SPARK_MODE=master
+      - SPARK_RPC_AUTHENTICATION_ENABLED=no
+
+    hostname: spark-master
+
+    ports:
+      - "8080:8080"   # Spark Master UI
+      - "7077:7077"   # Spark Master RPC
+    networks:
+      - spark-net
+
+  spark-worker:
+    image: bitnami/spark:3.4.1
+    container_name: spark-worker
+    environment:
+      - SPARK_MODE=worker
+      - SPARK_MASTER_URL=spark://spark-master:7077
+      - SPARK_WORKER_MEMORY=1G
+    depends_on:
+      - spark-master
+    ports:
+      - "8081:8081"   # Spark Worker UI
+    networks:
+      - spark-net
+
+networks:
+  spark-net:
+    driver: bridge
