@@ -1,3 +1,5 @@
+CREATE DATABASE spark_demo;
+USE spark_demo;
 CREATE TABLE test_user (
                            id INT PRIMARY KEY,
                            name VARCHAR(100),
