@@ -129,6 +129,22 @@ Pi is roughly 3.1424591424591424
 
 参看 App.java。
 
+打包后可用以下命令测试：
+```shell
+spark-submit --class com.xw.App \
+  --master "local[*]" \
+ target/practice-1.0-SNAPSHOT-jar-with-dependencies.jar
+```
+
+
 ### 编写从mysql读取数据并写入maxCompute的代码
 
 参看 MySQLToMaxCompute.java,代码中隐藏了access key的信息。
+
+打包后可用以下命令测试
+
+```shell
+spark-submit --class com.xw.MySQLToMaxCompute \
+  --master "local[*]" \
+ target/practice-1.0-SNAPSHOT-jar-with-dependencies.jar
+```
