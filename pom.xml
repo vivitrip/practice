@@ -52,7 +52,7 @@
           </descriptorRefs>
           <archive>
             <manifest>
-              <mainClass>com.xw.App</mainClass>
+              <mainClass>com.xw.MySQLToMaxCompute</mainClass>
             </manifest>
           </archive>
         </configuration>
