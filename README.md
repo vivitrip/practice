@@ -1,7 +1,7 @@
 # 练习项目：使用Spark完成从mysql读取数据并写入MaxCompute的过程
 ## 当前进度
 - [x] 主流程：从mysql读取数据并写入MaxCompute
-- [ ] 配置独立：每次执行任务时候从配置读取Spark、Mysql、MaxCompute的配置信息
+- [x] 配置独立：每次执行任务时候从配置读取Spark、Mysql、MaxCompute的配置信息
 - [ ] 增加单元测试
 
 ## 思路拆分和工程代码说明
